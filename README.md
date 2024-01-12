@@ -1,4 +1,18 @@
-# ERA-SESSION27
+# ERA-SESSION27 - Phi2 Model Finetuning with QLoRA on OpenAssistant Conversations Dataset (OASST1)
+
+🤗[**Space Link**](https://huggingface.co/spaces/RaviNaik/ERA-SESSION27) 
+
+This is an implementation of [Phi2](https://huggingface.co/microsoft/phi-2) model finetuning using QLoRA stratergy on [OpenAssistant Conversations Dataset (OASST1)](https://huggingface.co/datasets/OpenAssistant/oasst1) 
+             
+Dataset used to finetune: [OpenAssistant Conversations Dataset (OASST1)](https://huggingface.co/datasets/OpenAssistant/oasst1) 
+ChatML modified OSST Dataset: [RaviNaik/oasst1-chatml](https://huggingface.co/datasets/RaviNaik/oasst1-chatml) 
+Finetuned Model: [RaviNaik/Phi2-Osst](https://huggingface.co/RaviNaik/Phi2-Osst) 
+
+### Tasks:
+1. :heavy_check_mark: Use OpenAssistant dataset.
+2. :heavy_check_mark: Finetune Microsoft Phi2 model.
+3. :heavy_check_mark: Use QLoRA stratergy.
+4. :heavy_check_mark: Create an App on HF space using finetuned model.
 
 ## Phi2 Model Description:
 ```python
@@ -48,4 +62,13 @@ TrainOutput(global_step=500, training_loss=1.4746462078094482, metrics={'train_r
 ```
 ### Loss vs Steps Logs
 ![image](https://github.com/RaviNaik/ERA-SESSION27/assets/23289802/f305c4e7-c64d-4501-9b60-ae8f9a266349)
+
+## Sample Results:
+![image](https://github.com/RaviNaik/ERA-SESSION27/assets/23289802/e76a1f9c-24a4-40ac-b62a-291eacf1e3de)
+![image](https://github.com/RaviNaik/ERA-SESSION27/assets/23289802/72278fa6-6e2e-49ea-8f97-78e3eddff8ae)
+
+## Gradio UI:
+![image](https://github.com/RaviNaik/ERA-SESSION27/assets/23289802/4fe7e106-7616-408b-8132-644567f8d0bb)
+
+
 
