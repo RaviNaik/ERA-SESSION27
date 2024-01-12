@@ -9,20 +9,14 @@ from transformers import (
 
 model_name = "RaviNaik/Phi2-Osst"
 
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.float16,
-)
-
+device = "cuda" if torch.cuda.is_available() else "cpu"
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
-    quantization_config=bnb_config,
     trust_remote_code=True,
-    device_map="cuda:0"
+    device_map=device
 )
 model.config.use_cache = False
-tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, device_map="cuda:0")
+tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, device_map=device)
 tokenizer.pad_token = tokenizer.eos_token
 chat_template = """<|im_start|>system
 You are a helpful assistant who always respond to user queries<|im_end|>
