@@ -1,7 +1,7 @@
 gradio
 transformers[torch]
 accelerate
-peft
+git+https://github.com/huggingface/peft.git
 bitsandbytes
 einops
 trl
